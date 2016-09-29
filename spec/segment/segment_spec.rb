@@ -19,5 +19,10 @@ describe Geometry::Segment do
       segment = Geometry::Segment.new(0,0,3,4)
       expect(segment.length).to eq(5)
     end
+
+    it "should return return square root of 2 when given 1,1,2,2" do
+      segment = Geometry::Segment.new(1,1,2,2)
+      expect(segment.length).to eq(Math.sqrt(2))
+    end
   end
 end
