@@ -1,8 +1,8 @@
 class Geometry::Point
-  attr_reader :x, :y
+  attr_reader :x_coord, :y_coord
 
   def initialize(x, y)
-    @x = x
-    @y = y
+    @x_coord = x
+    @y_coord = y
   end
 end
