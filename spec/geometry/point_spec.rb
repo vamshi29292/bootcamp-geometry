@@ -11,5 +11,13 @@ describe Geometry::Point do
       expect(point.abscissa).to eq(5)
       expect(point.ordinate).to eq(8)
     end
+
+    it "should not be writeable" do
+      point = Geometry::Point.new(0,0)
+      expect{
+        point.ordinate = 4
+        point.abscissa = 5
+      }.to raise_error(NoMethodError)
+    end
   end
 end
