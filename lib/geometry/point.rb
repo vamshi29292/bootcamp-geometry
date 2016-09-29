@@ -1,8 +1,8 @@
 class Geometry::Point
   attr_reader :abscissa, :ordinate
 
-  def initialize(x,y)
-    @abscissa = x
-    @ordinate = y
+  def initialize(abscissa, ordinate)
+    @abscissa = abscissa
+    @ordinate = ordinate
   end
 end
