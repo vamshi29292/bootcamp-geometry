@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Geometry::Point do
   describe "#point" do
-    it "should create a point when x and y given co-ordinates" do
+    it "should create a point when given x and y co-ordinates" do
       point = Geometry::Point.new(4,5)
       expect(point.x).to eq(4)
       expect(point.y).to eq(5)
@@ -18,6 +18,12 @@ describe Geometry::Point do
       }.to raise_error(NoMethodError)
       expect(point.x).to eq(3)
       expect(point.y).to eq(2)
+    end
+
+    it "should throw ArgumentError when no co-ordinates passed" do
+      expect{
+        point = Geometry::Point.new()
+      }.to raise_error(ArgumentError)
     end
   end
 end
