@@ -11,4 +11,4 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
 
-require_relative "../lib/geometry"
+require_relative '../lib/geometry'
