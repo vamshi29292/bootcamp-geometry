@@ -9,6 +9,7 @@ class Geometry::LineSegment
   end
 
   def length
+    # http://bfy.tw/7wX1
     square_of_length = (x1 - x2)**2 + (y1 - y2)**2
     Math.sqrt(square_of_length)
   end

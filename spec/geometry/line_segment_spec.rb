@@ -1,6 +1,6 @@
 describe Geometry::LineSegment do
 
-  describe "length" do
+  describe "#length" do
     it "should return 4 when given 0,0,4,0" do
       segment = Geometry::LineSegment.new(0,0,4,0)
       expect(segment.length).to eq(4)
