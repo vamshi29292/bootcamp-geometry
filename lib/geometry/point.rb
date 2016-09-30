@@ -6,10 +6,10 @@ class Geometry::Point
     @ordinate = ordinate
   end
 
-  def ==(point2)
-    if point2 == nil || point2.class != Geometry::Point
+  def ==(other)
+    if self.class != other.class
       return false
     end
-    self.abscissa == point2.abscissa && self.ordinate == point2.ordinate
+    self.abscissa == other.abscissa && self.ordinate == other.ordinate
   end
 end
