@@ -21,11 +21,17 @@ describe Geometry::Point do
     end
   end
 
-  describe "#equality (==)" do
+  describe '#equality (==)' do
     it 'should return true when given 2,2 for both first and second points' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
       expect(point1 == point2).to eq(true)
+    end
+
+    it 'should return false when given 5,2 for first point and 5,1 for second point ' do
+      point1 = Geometry::Point.new(5,2)
+      point2 = Geometry::Point.new(5,1)
+      expect(point1 == point2).to eq(false)
     end
   end
 end
