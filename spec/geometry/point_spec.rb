@@ -42,17 +42,14 @@ describe Geometry::Point do
     it 'should return true for two points when checked for Symmetric property of equality' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
-      expect(point1 == point2).to eq(true)
-      expect(point2 == point1).to eq(true)
+      expect(point1 == point2 && point2 == point1).to eq(true)
     end
 
     it 'should return true for three points when checked for transitive property of equality' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
       point3 = Geometry::Point.new(2,2)
-      expect(point1 == point2).to eq(true)
-      expect(point2 == point3).to eq(true)
-      expect(point1 == point3).to eq(true)
+      expect((point1 == point2 && point2 == point3) && point1 == point3).to eq(true)
     end
 
     it 'should raise NoMethodError when one of the points is not of Point class' do
