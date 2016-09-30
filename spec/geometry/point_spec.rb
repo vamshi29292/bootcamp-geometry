@@ -60,5 +60,11 @@ describe Geometry::Point do
       point2 = Object.new()
       expect{point1 == point2}.to raise_error(NoMethodError)
     end
+
+    it 'should raise NoMethodError when one of the points is nil' do
+      point1 = Geometry::Point.new(2,2)
+      point2 = nil
+      expect{point1 == point2}.to raise_error(NoMethodError)
+    end
   end
 end
