@@ -25,43 +25,43 @@ describe Geometry::Point do
     it 'should return true when given 2,2 for both first and second points' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
-      expect(point1 == point2).to eq(true)
+      expect(point1 == point2).to be_truthy
     end
 
     it 'should return false when given 5,2 for first point and 5,1 for second point ' do
       point1 = Geometry::Point.new(5,2)
       point2 = Geometry::Point.new(5,1)
-      expect(point1 == point2).to eq(false)
+      expect(point1 == point2).to be_falsey
     end
 
     it 'should return true for one point when checked for Reflexive property of equality' do
       point1 = Geometry::Point.new(5,2)
-      expect(point1 == point1).to eq(true)
+      expect(point1 == point1).to be_truthy
     end
 
     it 'should return true for two points when checked for Symmetric property of equality' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
-      expect(point1 == point2 && point2 == point1).to eq(true)
+      expect(point1 == point2 && point2 == point1).to be_truthy
     end
 
     it 'should return true for three points when checked for transitive property of equality' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
       point3 = Geometry::Point.new(2,2)
-      expect((point1 == point2 && point2 == point3) && point1 == point3).to eq(true)
+      expect((point1 == point2 && point2 == point3) && point1 == point3).to be_truthy
     end
 
     it 'should raise NoMethodError when one of the points is not of Point class' do
       point1 = Geometry::Point.new(2,2)
       point2 = Object.new
-      expect(point1 == point2).to eq(false)
+      expect(point1 == point2).to be_falsey
     end
 
     it 'should raise NoMethodError when one of the points is nil' do
       point1 = Geometry::Point.new(2,2)
       point2 = nil
-      expect(point1 == point2).to eq(false)
+      expect(point1 == point2).to be_falsey
     end
   end
 end
