@@ -20,4 +20,12 @@ describe Geometry::Point do
       }.to raise_error(NoMethodError)
     end
   end
+
+  describe "#equality (==)" do
+    it 'should return true when given 2,2 for both first and second points' do
+      point1 = Geometry::Point.new(2,2)
+      point2 = Geometry::Point.new(2,2)
+      expect(point1 == point2).to eq(true)
+    end
+  end
 end
