@@ -54,5 +54,11 @@ describe Geometry::Point do
       expect(point2 == point3).to eq(true)
       expect(point1 == point3).to eq(true)
     end
+
+    it 'should raise NoMethodError when one of the points is not of Point class' do
+      point1 = Geometry::Point.new(2,2)
+      point2 = Object.new()
+      expect{point1 == point2}.to raise_error(NoMethodError)
+    end
   end
 end
