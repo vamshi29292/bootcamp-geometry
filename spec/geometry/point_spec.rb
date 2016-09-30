@@ -34,16 +34,25 @@ describe Geometry::Point do
       expect(point1 == point2).to eq(false)
     end
 
-    it 'should return true when both the points are same (Reflexive property)' do
+    it 'should return true for one point when checked for Reflexive property of equality' do
       point1 = Geometry::Point.new(5,2)
       expect(point1 == point1).to eq(true)
     end
 
-    it 'should return true for both point1==point2 and point2==point1 (Symmetric property)' do
+    it 'should return true for two points when checked for Symmetric property of equality' do
       point1 = Geometry::Point.new(2,2)
       point2 = Geometry::Point.new(2,2)
       expect(point1 == point2).to eq(true)
       expect(point2 == point1).to eq(true)
+    end
+
+    it 'should return true for three points when checked for transitive property of equality' do
+      point1 = Geometry::Point.new(2,2)
+      point2 = Geometry::Point.new(2,2)
+      point3 = Geometry::Point.new(2,2)
+      expect(point1 == point2).to eq(true)
+      expect(point2 == point3).to eq(true)
+      expect(point1 == point3).to eq(true)
     end
   end
 end
