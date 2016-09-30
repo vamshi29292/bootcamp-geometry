@@ -57,7 +57,7 @@ describe Geometry::Point do
 
     it 'should raise NoMethodError when one of the points is not of Point class' do
       point1 = Geometry::Point.new(2,2)
-      point2 = Object.new()
+      point2 = Object.new
       expect{point1 == point2}.to raise_error(NoMethodError)
     end
 
