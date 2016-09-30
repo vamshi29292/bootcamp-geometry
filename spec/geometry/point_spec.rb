@@ -22,14 +22,13 @@ describe Geometry::Point do
   end
 
   describe '#equality (==)' do
-
-    it 'should return false when given 5,2 for first point and 5,1 for second point ' do
+    it 'should be unequal when  their attributes are unequal' do
       point1 = Geometry::Point.new(5,2)
       point2 = Geometry::Point.new(5,1)
       expect(point1 == point2).to be_falsey
     end
 
-    it 'should return true for one point when checked for Reflexive property of equality' do
+    it 'should be equal when  their attributes are equal' do
       point1 = Geometry::Point.new(5,2)
       expect(point1 == point1).to be_truthy
     end
@@ -47,13 +46,13 @@ describe Geometry::Point do
       expect((point1 == point2 && point2 == point3) && point1 == point3).to be_truthy
     end
 
-    it 'should raise NoMethodError when one of the points is not of Point class' do
+    it 'should not be equal to any object of different type' do
       point1 = Geometry::Point.new(2,2)
       point2 = Object.new
       expect(point1 == point2).to be_falsey
     end
 
-    it 'should raise NoMethodError when one of the points is nil' do
+    it 'should not be equal to nil' do
       point1 = Geometry::Point.new(2,2)
       point2 = nil
       expect(point1 == point2).to be_falsey
