@@ -6,7 +6,7 @@ class Geometry::Point
     @ordinate = ordinate
   end
 
-  def == point2
+  def ==(point2)
     self.abscissa == point2.abscissa && self.ordinate == point2.ordinate
   end
 end

@@ -33,5 +33,10 @@ describe Geometry::Point do
       point2 = Geometry::Point.new(5,1)
       expect(point1 == point2).to eq(false)
     end
+
+    it 'should return true when both the points are same' do
+      point1 = Geometry::Point.new(5,2)
+      expect(point1 == point1).to eq(true)
+    end
   end
 end
