@@ -18,4 +18,11 @@ describe Geometry::Square do
       expect(square.perimeter).to eq(Float::INFINITY)
     end
   end
+
+  describe '#area' do
+    it 'should return 4 if the side is 2' do
+      square = Geometry::Square.new(2)
+      expect(square.area).to eq(4)
+    end
+  end
 end

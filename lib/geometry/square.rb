@@ -9,4 +9,8 @@ class Geometry::Square
     return Float::INFINITY if side < 0
     4*side
   end
+
+  def area
+    side**2
+  end
 end
