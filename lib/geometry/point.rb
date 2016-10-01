@@ -2,8 +2,8 @@ class Geometry::Point
   attr_reader :abscissa, :ordinate
 
   def initialize(abscissa, ordinate)
-    @abscissa = abscissa.to_i
-    @ordinate = ordinate.to_i
+    @abscissa = abscissa
+    @ordinate = ordinate
   end
 
   def ==(other)
