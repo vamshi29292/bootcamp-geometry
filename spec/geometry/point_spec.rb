@@ -77,5 +77,11 @@ describe Geometry::Point do
       point2 = Geometry::Point.new(10,14)
       expect(point1.distance(point2)).to eq(point2.distance(point1))
     end
+
+    it 'should return square root of 10.09 when given (1.5, 2) and (3, 4.8)' do
+      point1 = Geometry::Point.new(1.5, 2)
+      point2 = Geometry::Point.new(3, 4.8)
+      expect(point1.distance(point2)).to eq(Math.sqrt(10.09))
+    end
   end
 end
