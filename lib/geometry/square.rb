@@ -11,6 +11,7 @@ class Geometry::Square
   end
 
   def area
+    return Float::INFINITY if side < 0
     side**2
   end
 end
