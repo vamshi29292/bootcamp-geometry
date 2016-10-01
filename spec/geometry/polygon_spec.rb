@@ -17,5 +17,10 @@ describe Geometry::Polygon do
       expect(polygon1.perimeter).to eq(10)
       expect(polygon2.perimeter).to eq(18)
     end
+
+    it 'should return infinity when any of the sides are negative' do
+      polygon = Geometry::Polygon.new(-1,-1,2,2)
+      expect(polygon.perimeter).to eq(Float::INFINITY)
+    end
   end
 end
