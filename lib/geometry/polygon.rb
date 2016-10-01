@@ -9,6 +9,7 @@ class Geometry::Polygon
   end
 
   def valid?
+    return false if @sides.size < 3
     @sides.each do |side|
       return false if side < 0
     end
