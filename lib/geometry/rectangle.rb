@@ -9,4 +9,8 @@ class Geometry::Rectangle
   def perimeter
     2*(length + width)
   end
+
+  def area
+    length*width
+  end
 end

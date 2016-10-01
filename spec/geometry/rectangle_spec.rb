@@ -13,4 +13,11 @@ describe Geometry::Rectangle do
       expect(rectangle.perimeter).to eq(6)
     end
   end
+
+  describe '#area' do
+    it 'should return 2 when given length=1 and width=2' do
+      rectangle = Geometry::Rectangle.new(1,2)
+      expect(rectangle.area).to eq(2)
+    end
+  end
 end
