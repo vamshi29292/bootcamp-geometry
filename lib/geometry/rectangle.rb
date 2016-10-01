@@ -7,12 +7,16 @@ class Geometry::Rectangle
   end
 
   def perimeter
-    return Float::INFINITY if length < 0 || width < 0
+    return Float::INFINITY unless valid?
     2*(length + width)
   end
 
   def area
-    return Float::INFINITY if length < 0 || width < 0
+    return Float::INFINITY unless valid?
     length*width
+  end
+
+  def valid?
+    length > 0 && width > 0
   end
 end
