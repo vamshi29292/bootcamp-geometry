@@ -6,4 +6,11 @@ describe Geometry::Rectangle do
       }.to_not raise_exception
     end
   end
+
+  describe '#perimeter' do
+    it 'should return 4 when given length=1 and width=2' do
+      rectangle = Geometry::Rectangle.new(1,2)
+      expect(rectangle.perimeter).to eq(6)
+    end
+  end
 end

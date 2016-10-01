@@ -5,4 +5,8 @@ class Geometry::Rectangle
     @length = length
     @width = width
   end
+
+  def perimeter
+    2*(length + width)
+  end
 end
