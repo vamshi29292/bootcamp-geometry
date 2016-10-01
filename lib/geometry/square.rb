@@ -6,6 +6,7 @@ class Geometry::Square
   end
 
   def perimeter
+    return Float::INFINITY if side < 0
     4*side
   end
 end

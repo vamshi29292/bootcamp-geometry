@@ -12,5 +12,10 @@ describe Geometry::Square do
       square = Geometry::Square.new(2)
       expect(square.perimeter).to eq(8)
     end
+
+    it 'should return infinity when side is negative' do
+      square = Geometry::Square.new(-1)
+      expect(square.perimeter).to eq(Float::INFINITY)
+    end
   end
 end
