@@ -58,4 +58,12 @@ describe Geometry::Point do
       expect(point1 == point2).to be_falsey
     end
   end
+
+  describe '#distance' do
+    it 'should return square root of 2 when given (0,0) and (1,1)' do
+      point1 = Geometry::Point.new(0,0)
+      point2 = Geometry::Point.new(1,1)
+      expect(point1.distance(point2)).to eq(Math.sqrt(2))
+    end
+  end
 end

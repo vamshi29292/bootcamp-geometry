@@ -12,4 +12,9 @@ class Geometry::Point
     end
     self.abscissa == other.abscissa && self.ordinate == other.ordinate
   end
+
+  def distance(other)
+    line_segment = Geometry::LineSegment.new(self.abscissa, self.ordinate, other.abscissa, other.ordinate)
+    line_segment.length
+  end
 end
