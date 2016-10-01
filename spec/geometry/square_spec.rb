@@ -6,4 +6,11 @@ describe Geometry::Square do
       }.to_not raise_exception
     end
   end
+
+  describe '#perimeter' do
+    it 'should return 8 when side is given as 2' do
+      square = Geometry::Square.new(2)
+      expect(square.perimeter).to eq(8)
+    end
+  end
 end
