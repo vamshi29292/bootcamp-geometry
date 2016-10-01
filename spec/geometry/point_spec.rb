@@ -65,5 +65,17 @@ describe Geometry::Point do
       point2 = Geometry::Point.new(1,1)
       expect(point1.distance(point2)).to eq(Math.sqrt(2))
     end
+
+    it 'should return 10 when given (4,6) and (10,14)' do
+      point1 = Geometry::Point.new(4,6)
+      point2 = Geometry::Point.new(10,14)
+      expect(point1.distance(point2)).to eq(10)
+    end
+
+    it 'should return same value when the order of points reversed' do
+      point1 = Geometry::Point.new(4,6)
+      point2 = Geometry::Point.new(10,14)
+      expect(point1.distance(point2)).to eq(point2.distance(point1))
+    end
   end
 end
