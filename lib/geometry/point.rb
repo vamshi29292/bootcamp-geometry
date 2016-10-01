@@ -14,7 +14,8 @@ class Geometry::Point
   end
 
   def distance(other)
-    line_segment = Geometry::LineSegment.new(self.abscissa, self.ordinate, other.abscissa, other.ordinate)
-    line_segment.length
+    # http://bfy.tw/7wX1
+    square_of_distance = (self.abscissa - other.abscissa)**2 + (self.ordinate - other.ordinate)**2
+    Math.sqrt(square_of_distance)
   end
 end
