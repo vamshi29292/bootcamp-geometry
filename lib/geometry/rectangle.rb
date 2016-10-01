@@ -17,6 +17,6 @@ class Geometry::Rectangle
   end
 
   def valid?
-    length > 0 && width > 0
+    length >=0 && width >= 0
   end
 end
